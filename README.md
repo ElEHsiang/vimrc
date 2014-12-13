@@ -7,7 +7,7 @@ Installation
 
 `wget https://raw.githubusercontent.com/ElEHsiang/vimrc/master/vimrc`
 
-`mv vimrc .vimrc`
+`mv vimrc ~/.vimrc`
 
 In vim:
 
