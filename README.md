@@ -3,15 +3,10 @@ vimrc
 
 Installation
 
-`git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
-
-`wget https://raw.githubusercontent.com/ElEHsiang/vimrc/master/vimrc`
-
-`mv vimrc ~/.vimrc`
-
-In vim:
-
-`:PluginInstall`
-
-
+1. Install nvim
+2. `mv init.vim ~/.config/nvim/`
+3. install vim-plug
+`https://github.com/junegunn/vim-plug`
+4. launch vim and type `:PlugInstall`
+5. intstall language lsp package by coc, ex. `:CocInstall coc-pyright`
 
