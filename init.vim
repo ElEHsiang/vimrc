@@ -78,9 +78,6 @@ set secure
 au FileType markdown set wrap
 au FileType text set wrap
 
-" File type alias
-source $VIMRUNTIME/filetype.vim
-
 " Language setting---------------------------------------------
 " For cpp
 autocmd FileType cpp set cindent
@@ -93,6 +90,7 @@ nnoremap <C-L> :cp <cr>
 set t_Co=256
 colorscheme molokai
 set hlsearch
+set termguicolors
 
 " Plugin setting--------------------------------------------------------------
 " Plug 'luochen1990/rainbow'
@@ -115,6 +113,9 @@ let g:airline#extensions#tabline#formatter = 'default'
 
 " Plug 'scrooloose/nerdtree'
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Plug 'Vista'
+autocmd bufenter * if winnr("$") == 1 && vista#sidebar#IsOpen() | execute "normal! :q!\<CR>" | endif
 
 " vim nmap put all tag files into ~/.cache/tags
 let s:vim_tags = expand('~/.cache/tags')
